@@ -9,8 +9,10 @@ def _style_text(
     effects = None, 
     reset_after = True 
 ):
+    text_str = str(text) if text is not None else ""
+
     if not _is_terminal_supported():
-        return str(text)
+        return text_str
     
     style_parts = []
     
@@ -25,12 +27,12 @@ def _style_text(
             if _validate_style(effect):
                 style_parts.append(COLOR_CODES[effect])
     
-    styled_text = "".join(style_parts) + str(text)
+    styled_text = "".join(style_parts) + text_str
     
     if reset_after:
         styled_text += COLOR_CODES["reset"]
     
-    return styled_text
+    return str(styled_text)
 
 def _print_password(prompt = "Enter password: "):
     print(_style_text(prompt, fg_color="blue", effects=["bold"]), end="")

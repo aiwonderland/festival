@@ -1,5 +1,9 @@
 from .core import _style_text, _print_password
 
+__all__ = [
+    "style_text",
+    "print_password"
+]
 def style_text(
     text,
     fg_color = None,
@@ -17,7 +21,7 @@ def style_text(
     :param reset_after: Whether to reset all styles at the end of the text (default True)
     :return: Formatted text (returns the original text if not supported by the terminal)
     """
-    _style_text(text=text,
+    return _style_text(text=text,
                 fg_color=fg_color,
                 bg_color=bg_color,
                 effects=effects,
@@ -30,5 +34,5 @@ def print_password(prompt = "Enter password: "):
     :param porompt: Text displayed before prompting for password input.
     :return: The password entered by the user
     """
-    _print_password(prompt=prompt)
+    return _print_password(prompt=prompt)
     

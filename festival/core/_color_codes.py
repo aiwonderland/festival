@@ -1,11 +1,11 @@
 COLOR_CODES = {
-    "reset": "\033[0m",   
-    "bold": "\033[1m",      
-    "dim": "\033[2m",       
+    "reset": "\033[0m",
+    "bold": "\033[1m",
+    "dim": "\033[2m",
     "underline": "\033[4m",
-    "blink": "\033[5m",   
-    "reverse": "\033[7m",   
-    "hidden": "\033[8m",    
+    "blink": "\033[5m",
+    "reverse": "\033[7m",
+    "hidden": "\033[8m",
 
     "black": "\033[90m",   
     "red": "\033[91m",

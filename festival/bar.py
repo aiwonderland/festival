@@ -1,5 +1,8 @@
 from .core import _Bar
 
+__all__ = [
+    "Bar"
+]
 class Bar(_Bar):
     """Single-line progress bar.
 
