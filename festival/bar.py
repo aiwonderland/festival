@@ -1,8 +1,10 @@
+from functools import total_ordering
 from .core import _Bar
 
 __all__ = [
     "Bar"
 ]
+@total_ordering
 class Bar(_Bar):
     """Single-line progress bar.
 
@@ -18,3 +20,15 @@ class Bar(_Bar):
 
     def draw(self):
         return super()._draw()
+    
+    def __repr__(self):
+        return super().__repr__()
+    
+    def __hash__(self):
+        return super().__hash__()
+    
+    def __eq__(self, value):
+        return super().__eq__(value)
+    
+    def __gt__(self, other):
+        return super().__gt__(other)

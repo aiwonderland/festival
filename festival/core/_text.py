@@ -17,25 +17,25 @@ def _style_text(
     style_parts = []
     
     if fg_color and _validate_style(fg_color):
-        style_parts.append(COLOR_CODES[fg_color])
+        style_parts.append(COLOR_CODES[fg_color])  # type: ignore
     
     if bg_color and _validate_style(bg_color):
-        style_parts.append(COLOR_CODES[bg_color])
+        style_parts.append(COLOR_CODES[bg_color]) # type: ignore
     
     if effects and isinstance(effects, list):
         for effect in effects:
             if _validate_style(effect):
-                style_parts.append(COLOR_CODES[effect])
+                style_parts.append(COLOR_CODES[effect]) # type: ignore
     
     styled_text = "".join(style_parts) + text_str
     
     if reset_after:
-        styled_text += COLOR_CODES["reset"]
+        styled_text += COLOR_CODES["reset"] # type: ignore
     
     return str(styled_text)
 
 def _print_password(prompt = "Enter password: "):
     print(_style_text(prompt, fg_color="blue", effects=["bold"]), end="")
     password = input(_style_text("", effects=["hidden"]))
-    print(COLOR_CODES["reset"])
+    print(COLOR_CODES["reset"]) # type: ignore
     return password
