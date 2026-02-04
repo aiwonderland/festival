@@ -34,23 +34,3 @@ def _style_text(
         styled_text += COLOR_CODES["reset"] # type: ignore
     
     return str(styled_text)
-
-
-# class ColorfulText:
-#     """"""
-
-#     def __init__(self, text, color = "#ffc0cb"):
-#         self.text = text
-#         self.color = color
-    
-#     def __len__(self):
-#         return len(self.text)
-    
-#     def __repr__(self):
-#         return 
-
-#     def _get_color_string(self):
-#         return _get_colored_string(self.text, self.color)
-    
-
-

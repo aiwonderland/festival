@@ -1,5 +1,5 @@
 from functools import total_ordering
-from .core import _Bar
+from .core._bar import _Bar
 
 __all__ = [
     "Bar"

@@ -8,3 +8,4 @@ class FestivalBaseException(Exception):
 class BarValueError(FestivalBaseException, ValueError):
     """If the `progress` of the `Bar` is less than or equal to 0, throw this error."""
     pass
+
