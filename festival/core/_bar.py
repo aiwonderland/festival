@@ -1,4 +1,3 @@
-import sys
 from functools import total_ordering
 
 from festival.main_exception import BarValueError
@@ -24,7 +23,10 @@ class _Bar:
         self.width = width
         self.fill_char = fill_char
         self.empty_char = empty_char
-
+        
+    def __len__(self):
+        return self.current
+    
     def __repr__(self):
         return (
             f"Bar(current={self.current}, "
@@ -43,8 +45,7 @@ class _Bar:
             return False
 
         return (
-            self.current == value.current
-            and self.total == value.total
+            self.total == value.total
             and self.prefix == value.prefix
             and self.width == value.width
             and self.fill_char == value.fill_char
@@ -71,11 +72,8 @@ class _Bar:
         filled_length = int(self.width * (self.current / self.total))
 
         bar = self.fill_char * filled_length + self.empty_char * (self.width - filled_length)
-        progress_text = f"\r{self.prefix}: [{bar}] {percent:.1f}%"
+        progress_text = f"{self.prefix}: [{bar}] {percent:.1f}%"
 
-        sys.stdout.write(progress_text)
-        sys.stdout.flush()
+        return progress_text
 
-        if self.current == self.total:
-            print()
 

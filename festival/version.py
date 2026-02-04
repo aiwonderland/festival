@@ -1,4 +1,4 @@
-__version__ = "0.0.0-beta.2"
+__version__ = "0.0.0-beta.3"
 __author__ = "aiwonderland"
 __copyright__ = "(C) 2026 aiwonderland and festival team"
 __email__ = "quantbit@126.com"

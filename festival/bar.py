@@ -19,6 +19,7 @@ class Bar(_Bar):
         super().__init__(current, total, prefix, width, fill_char, empty_char)
 
     def draw(self):
+        """draw the bar."""
         return super()._draw()
     
     def __repr__(self):
@@ -32,3 +33,6 @@ class Bar(_Bar):
     
     def __gt__(self, other):
         return super().__gt__(other)
+    
+    def __len__(self):
+        return super().__len__()

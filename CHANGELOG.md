@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.0-beta.3] - 2026-02-04
+### Added
+- test files.
+- docstring in `Bar`.
+### Fixed
+- The `_Bar` class is missing the `__len__` method.
+- Fix _draw() method in `_Bar` to return a string.
+- Fix __eq__ method in `Bar` to not compare current values.
+
 ## [0.0.0-beta.2] - 2026-02-04
 ### Fixed
 - The example in the README document contains a line of HTML(#1).
