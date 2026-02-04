@@ -1,6 +1,7 @@
 from ._color_codes import COLOR_CODES
 from ._is_terminal_supported import _is_terminal_supported
 from ._validate_style import _validate_style
+from ._get_colored_string import _get_colored_string
 
 def _style_text(
     text,
@@ -34,8 +35,22 @@ def _style_text(
     
     return str(styled_text)
 
-def _print_password(prompt = "Enter password: "):
-    print(_style_text(prompt, fg_color="blue", effects=["bold"]), end="")
-    password = input(_style_text("", effects=["hidden"]))
-    print(COLOR_CODES["reset"]) # type: ignore
-    return password
+
+# class ColorfulText:
+#     """"""
+
+#     def __init__(self, text, color = "#ffc0cb"):
+#         self.text = text
+#         self.color = color
+    
+#     def __len__(self):
+#         return len(self.text)
+    
+#     def __repr__(self):
+#         return 
+
+#     def _get_color_string(self):
+#         return _get_colored_string(self.text, self.color)
+    
+
+

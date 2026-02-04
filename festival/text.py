@@ -1,8 +1,7 @@
-from .core import _style_text, _print_password
+from .core import _style_text
 
 __all__ = [
-    "style_text",
-    "print_password"
+    "style_text"
 ]
 def style_text(
     text,
@@ -27,12 +26,4 @@ def style_text(
                 effects=effects,
                 reset_after=reset_after)
     
-def print_password(prompt = "Enter password: "):
-    """
-    Password input prompt (input content hidden, demonstrating the `hidden` effect only)
-
-    :param porompt: Text displayed before prompting for password input.
-    :return: The password entered by the user
-    """
-    return _print_password(prompt=prompt)
     

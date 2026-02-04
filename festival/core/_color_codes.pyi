@@ -1,1 +1,0 @@
-COLOR_CODES = dict[str, str]

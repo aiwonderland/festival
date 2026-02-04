@@ -1,7 +1,8 @@
 from ._is_terminal_supported import _is_terminal_supported
 from ._validate_style import _validate_style
-from ._text import _style_text, _print_password
+from ._text import _style_text
 from ._bar import _Bar
+from ._get_colored_string import _get_colored_string
 from ._color_codes import COLOR_CODES
 
 __all__ = [
@@ -9,6 +10,6 @@ __all__ = [
     "COLOR_CODES",
     "_validate_style",
     "_style_text",
-    "_print_password",
-    "_Bar"
+    "_Bar",
+    "_get_colored_string"
 ]

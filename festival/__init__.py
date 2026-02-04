@@ -16,14 +16,13 @@ from __version__ import (
 )
 
 from .core import COLOR_CODES
-from .text import style_text, print_password
+from .text import style_text
 from .bar import Bar
-import exception  
+import festival.exceptions as exceptions
 
 __all__ = [
     "COLOR_CODES",
     "style_text",
-    "print_password",
     "Bar",
-    "exception"
+    "exceptions"
 ]

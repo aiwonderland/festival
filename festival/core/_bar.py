@@ -1,7 +1,7 @@
 import sys
 from functools import total_ordering
 
-from festival.exception import BarValueError
+from festival.main_exception import BarValueError
 
 @total_ordering
 class _Bar:
