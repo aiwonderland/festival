@@ -22,3 +22,5 @@ Before asking a question, please check the project's `README.md` and `CONTRIBUTI
 
 ## 6. Other Notes
 These rules align with the project's `CODE_OF_CONDUCT.md`. For details, see the project repository: [[Repository Link](https://github.com/aiwonderland/festival.git)]
+
+By the way, here is the link to our official discussion group.[[here](https://github.com/aiwonderland/festival/discussions)]
