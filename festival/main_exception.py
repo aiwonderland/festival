@@ -1,5 +1,3 @@
-"""The `exception` in all the festival."""
-
 class FestivalBaseException(Exception):
     """The base error exception in the `festival`."""
     def __init__(self, message):

@@ -1,10 +1,12 @@
 import sys
 import os
+import pytest
 
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, project_root)
 
 from festival.bar import Bar
+from festival.exceptions import BarValueError
 
 def test_bar_draw():
     bar = Bar(current=45)
@@ -33,3 +35,8 @@ def test_bar_compare():
 def test_bar_repr():
     br = Bar(current=40)
     assert repr(br) == "Bar(current=40, total=100, prefix='Progress', width=30, fill_char='#', empty_char='-')"
+
+def test_bar_error():
+    with pytest.raises(BarValueError):
+        be = Bar(current=-1)
+        

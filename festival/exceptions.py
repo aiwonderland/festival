@@ -1,3 +1,5 @@
+"""The exception in all the `festival`."""
+
 from .main_exception import (
     FestivalBaseException,
     BarValueError
